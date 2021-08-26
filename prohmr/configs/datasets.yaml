@@ -1,0 +1,61 @@
+H36M-TRAIN:
+    TYPE: ImageDataset
+    DATASET_FILE: data/datasets/h36m_train.npz
+    IMG_DIR: data/datasets/h36m/images
+    MEAN_STATS: data/datasets/h36m_train_mean_stats.npz
+MPII-TRAIN:
+    TYPE: ImageDataset
+    DATASET_FILE: data/datasets/mpii_train_spin.npz
+    IMG_DIR: data/datasets/mpii_human_pose_v1_u12_2/images
+COCO-TRAIN-2014:
+    TYPE: ImageDataset
+    DATASET_FILE: data/datasets/coco_2014_train_spin.npz
+    IMG_DIR: data/datasets/coco
+MPI-INF-TRAIN:
+    TYPE: ImageDataset
+    DATASET_FILE: data/datasets/mpi_inf_3dhp_train.npz
+    IMG_DIR: data/datasets/mpi_inf_3dhp
+H36M-VAL-P2:
+    TYPE: ImageDataset
+    DATASET_FILE: data/datasets/h36m_val_p2.npz
+    IMG_DIR: data/datasets/h36m/images
+    KEYPOINT_LIST: [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 43]
+    USE_HIPS: True
+H36M-VAL:
+    TYPE: ImageDataset
+    DATASET_FILE: data/datasets/h36m_val.npz
+    IMG_DIR: data/datasets/h36m/images
+    KEYPOINT_LIST: [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 39, 41, 42, 43]
+    USE_HIPS: True
+H36M-VAL-P2-OPENPOSE:
+    TYPE: ImageDataset
+    DATASET_FILE: data/datasets/h36m_val_p2_openpose.npz
+    IMG_DIR: data/datasets/h36m/images
+    KEYPOINT_LIST: [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 43]
+    USE_HIPS: False
+3DPW-TEST:
+    TYPE: ImageDataset
+    DATASET_FILE: data/datasets/3dpw_test.npz
+    IMG_DIR: data/datasets/3DPW
+    KEYPOINT_LIST: [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 43]
+    USE_HIPS: False
+MPI-INF_TEST:
+    TYPE: ImageDataset       
+    DATASET_FILE: data/datasets/mpi_inf_3dhp_valid.npz                                                                                                                               
+    IMG_DIR: data/datasets/mpi_inf_3dhp       
+    KEYPOINT_LIST: [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 42] 
+COCO-VAL:
+    TYPE: ImageDataset
+    DATASET_FILE: data/datasets/coco_val.npz
+    IMG_DIR: data/datasets/coco
+H36M-VAL-MULTIVIEW:
+    TYPE: BatchedImageDataset
+    DATASET_FILE: data/datasets/h36m_multiview.pkl
+    IMG_DIR: data/datasets/h36m/images
+    KEYPOINT_LIST: [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 43]
+MANNEQUIN:
+    TYPE: BatchedImageDataset
+    DATASET_FILE: data/datasets/mannequin.pkl
+    IMG_DIR: data/datasets/MannequinChallenge
+CMU-MOCAP:
+    DATASET_FILE: data/datasets/cmu_mocap.npz
