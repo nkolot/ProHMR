@@ -77,7 +77,7 @@ for i, batch in enumerate(tqdm(dataloader)):
         img_fn, _ = os.path.splitext(os.path.split(batch['imgname'][n])[1])
         regression_img = renderer(out['pred_vertices'][n, 0].detach().cpu().numpy(),
                                   out['pred_cam_t'][n, 0].detach().cpu().numpy(),
-                                  batch['img'][0])
+                                  batch['img'][n])
         cv2.imwrite(os.path.join(args.out_folder, f'{img_fn}_regression.{args.out_format}'), 255*regression_img[:, :, ::-1])
     if args.run_fitting:
         opt_out = model.downstream_optimization(regression_output=out,
