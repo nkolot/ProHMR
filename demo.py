@@ -75,8 +75,8 @@ for i, batch in enumerate(tqdm(dataloader)):
     batch_size = batch['img'].shape[0]
     for n in range(batch_size):
         img_fn, _ = os.path.splitext(os.path.split(batch['imgname'][n])[1])
-        regression_img = renderer(out['pred_vertices'][0, 0].detach().cpu().numpy(),
-                                  out['pred_cam_t'][0, 0].detach().cpu().numpy(),
+        regression_img = renderer(out['pred_vertices'][n, 0].detach().cpu().numpy(),
+                                  out['pred_cam_t'][n, 0].detach().cpu().numpy(),
                                   batch['img'][0])
         cv2.imwrite(os.path.join(args.out_folder, f'{img_fn}_regression.{args.out_format}'), 255*regression_img[:, :, ::-1])
     if args.run_fitting:
@@ -87,7 +87,7 @@ for i, batch in enumerate(tqdm(dataloader)):
                                                 full_frame=args.full_frame)
         for n in range(batch_size):
             img_fn, _ = os.path.splitext(os.path.split(batch['imgname'][n])[1])
-            fitting_img = renderer(opt_out['vertices'][0].detach().cpu().numpy(),
-                                   opt_out['camera_translation'][0].detach().cpu().numpy(),
-                                   batch['img'][0], imgname=batch['imgname'][0], full_frame=args.full_frame)
+            fitting_img = renderer(opt_out['vertices'][n].detach().cpu().numpy(),
+                                   opt_out['camera_translation'][n].detach().cpu().numpy(),
+                                   batch['img'][n], imgname=batch['imgname'][n], full_frame=args.full_frame)
             cv2.imwrite(os.path.join(args.out_folder, f'{img_fn}_fitting.{args.out_format}'), 255*fitting_img[:, :, ::-1])
