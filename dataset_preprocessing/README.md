@@ -6,8 +6,8 @@ The datasets that our code supports are:
 3. [MPI-INF-3DHP](http://gvv.mpi-inf.mpg.de/3dhp-dataset/)
 4. [MPII](http://human-pose.mpi-inf.mpg.de)
 5. [COCO](http://cocodataset.org/#home)
-6. [Mannequin Challenge]
-6. [CMU-MOCAP]()
+6. [Mannequin Challenge](https://google.github.io/mannequinchallenge/www/index.html)
+6. [CMU-MOCAP](http://mocap.cs.cmu.edu)
 
 More specifically:
 1. **Human3.6M**: Unfortunately, due to license limitations, we are not allowed to redistribute the MoShed data that we used for training.
