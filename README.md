@@ -3,7 +3,7 @@ Code repository for the paper:
 **Probabilistic Modeling for Human Mesh Recovery**  
 [Nikos Kolotouros](https://www.seas.upenn.edu/~nkolot/), [Georgios Pavlakos](https://geopavlakos.github.io/), [Dinesh Jayaraman](http://www.seas.upenn.edu/~dineshj), [Kostas Daniilidis](http://www.cis.upenn.edu/~kostas/)  
 ICCV 2021  
-[[paper]()] [[project page](https://www.seas.upenn.edu/~nkolot/projects/prohmr/)] [[colab notebook](https://colab.research.google.com/drive/1ivLN2TSL08RgWO49qZWFiDNzImIAhGzb?usp=sharing)]
+[[paper](http://arxiv.org/abs/2108.11944)] [[project page](https://www.seas.upenn.edu/~nkolot/projects/prohmr/)] [[colab notebook](https://colab.research.google.com/drive/1ivLN2TSL08RgWO49qZWFiDNzImIAhGzb?usp=sharing)]
 
 ![teaser](teaser.png)
 
