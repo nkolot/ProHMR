@@ -133,8 +133,8 @@ def preprocess_h36m(dataset_path: str, out_file: str, split: str, extract_img: b
     np.savez(out_file, imgname=imgnames_,
                        center=centers_,
                        scale=scales_,
-                       extra_keypoints_2d=extra_keypoints_2d,
-                       extra_keypoints_3d=extra_keypoints_3d)
+                       extra_keypoints_2d=extra_keypoints_2d_,
+                       extra_keypoints_3d=extra_keypoints_3d_)
 
 def preprocess_h36m_multiview(input_file: str, out_file: str):
     '''
